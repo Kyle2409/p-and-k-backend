@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
+    product_id:{
+        type: String
+      },
     title: {
         type: String,
         required: true,
@@ -14,11 +17,11 @@ const productSchema = new mongoose.Schema({
         required: true,
     },
     img: {
-        type: String,
-        required: true,
-        default: null,
-    },
-    descripton: {
+    type: String,
+    required: false,
+    default: "https://furntech.org.za/wp-content/uploads/2017/05/placeholder-image.png",
+  },
+    description: {
         type: String,
         required: true,
         
